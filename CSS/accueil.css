@@ -1,0 +1,52 @@
+.alert{
+	display: flex;
+	align-items: center;
+	background-color: #ffa416;
+	color: #fff;
+	border: 1px solid #cc7f08;
+	padding: 10px;
+}
+
+.alert img{
+	width: 80px;
+	margin-right:10px;
+}
+
+
+.home{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.home div p {
+	text-align: center;
+	border: solid #DEDEDE;
+}
+
+.home div h1{
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+
+.subject{
+	display: flex;
+	background-color: #C26411;
+	border: solid #DEDEDE ;
+	border-radius: 10px;
+	width: 200px;
+}
+
+.title{
+
+	font-weight: bold;
+	text-align: center;
+	height: 10px;
+}
+
+.subject hr{
+
+	width:  90%;
+	color: white;
+}
+
