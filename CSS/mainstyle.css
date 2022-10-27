@@ -23,13 +23,19 @@ b{
 
 p{
 	line-height: 25px;
+	margin: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 a{
 	text-decoration: underline;
 	font-weight: bold;
-	color:  #fff;
 	width: auto;
+}
+
+content{
+	margin: 1000px;
 }
 
 
@@ -42,6 +48,7 @@ a{
 .banner a{
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 	color: #fff;
 }

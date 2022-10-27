@@ -13,40 +13,67 @@
 }
 
 
-.home{
+.courses{
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
-.home div p {
+.subject h3{
 	text-align: center;
-	border: solid #DEDEDE;
-}
-
-.home div h1{
-	font-size: 1.2em;
-	text-decoration: underline;
+	color: white;
+	text-shadow: 1px 1px #999;
 }
 
 .subject{
+	width: 330px;
+	margin: 20px;
+	background-color: #ffa416;
+	border-bottom: 3px solid #cc7f08;
+	padding: 10px;
+}
+
+.subject div{
 	display: flex;
-	background-color: #C26411;
-	border: solid #DEDEDE ;
-	border-radius: 10px;
-	width: 200px;
+	justify-content: space-evenly;
 }
 
-.title{
-
-	font-weight: bold;
-	text-align: center;
-	height: 10px;
+.learn{
+	display: flex;
+	color: #fff;
+	padding: 5px;
+	margin: 10px;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #555;
+	border-bottom: 2px solid #444;
 }
 
-.subject hr{
 
-	width:  90%;
-	color: white;
+.learn img{
+	display: inline;
+	margin-left: 10px;
+	margin-right: -5px;
+	height: 30px;
+	width:  30px;
 }
 
+.exercice{
+	display: flex;
+	color: #fff;
+	padding: 5px;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #555;
+	border-bottom: 2px solid #444;
+	margin: 10px;
+}
+
+
+.exercice img{
+	display: inline;
+	margin-right: -5px;
+	height: 20px;
+	width:  20px;
+}
