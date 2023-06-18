@@ -1,12 +1,213 @@
+:root{
+    --text: #020302;
+    --background: #fcfdfc;
+    --primary-button: #559b6f;
+    --secondary-button: #e8f2ec;
+    --accent: #61a87b;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/misc/Inter.ttf");
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.panel{
+    scroll-snap-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: var(--accent) solid 2px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.panel > h1
+{
+    color: var(--accent);
+    font-size: 3em;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.panel:nth-child(2)
+{
+    background-image: url("/images/forest (Moyen).jpg");
+    background-size: cover;
+}
+
+.slider{
+    display: flex;
+    justify-self: center;
+    min-width: 0;
+    flex-direction: row;
+    width: 90%;
+    border-radius: 1rem;
+    border: 22px solid var(--secondary-button);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 50px auto auto;
+    background-color: var(--secondary-button);
+    gap: 25px;
+}
+
+.no_scroll_bar{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no_scroll_bar::-webkit-scrollbar {
+    display: none;
+}
+
+.card{
+    position: relative;
+    min-width: 400px;
+    height: 280px;
+    flex-grow: 1;
+    background-color: var(--secondary-button);
+}
+.card > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.back_blur{
+    background-color: color-mix(in srgb, var(--secondary-button), transparent 30%);
+    backdrop-filter: blur(2px);
+}
+
+.card_content > p {
+    text-align: center;
+}
+
+.logo{
+    display: block;
+
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 3;
+
+    width: 100%;
+    height: 100%;
+}
+
+.presentation{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.description{
+    display: flex;
+
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+
+}
+
+.description > h1 {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.presentation hr{
+    width: 95%;
+    border: 1px solid var(--accent);
+}
+
+.presentation h2{
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.competences {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.competence {
+    background-color: var(--secondary-button);
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+    min-width: 200px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.description > p
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 4;
+    grid-column: 1 / span 5;
+
+    justify-self: center;
+    margin: auto;
+}
+
+.contact_infos{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
 body{
-	background-color: #fff;
-	color: #333;
-	font-family: 'メイリオ',Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Arial,sans-serif;
+	background-color: var(--background);
+	color: var(--text);
+	font-family: "Inter", Arial, sans-serif;
+    /*max-width: 1000px;*/
+    margin: auto;
 }
 
 h1{
 	font-weight: bold;
 	font-size: 2.5em;
+    margin: 20px 0;
 }
 
 h2{
@@ -18,23 +219,60 @@ h2{
 
 b{
 	font-weight: bold;
-	color: gray;
+	color: var(--accent);
 }
 
 p{
 	line-height: 25px;
-	margin: 10px;
-	margin-left: 15px;
-	margin-right: 15px;
+    margin: 10px 0;
 }
 
 a{
 	text-decoration: underline;
 	font-weight: bold;
+    color: var(--accent);
 	width: auto;
 }
 
-content{
+.navigation_bar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin: 5px 10px 50px;
+}
+
+.navigation_bar a
+{
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.navigation_bar > a:hover
+{
+    transform: translateY(-3px);
+}
+
+.button{
+    background-color: var(--primary-button);
+    color: var(--background) !important;
+    padding: 15px;
+    margin: 10px 0 0 10px;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.1s;
+}
+
+.button:hover{
+    transform: scale(1.03) translateY(-3px) !important;
+    box-shadow: #10f49c 0 3px 10px 0;
+    cursor: pointer;
+}
+
+.content{
 	margin: 1000px;
 }
 
