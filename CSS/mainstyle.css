@@ -266,6 +266,9 @@ a{
     transition: transform 0.2s, box-shadow 0.1s;
 }
 
+.button > i{
+    margin-right: 10px;
+}
 .button:hover{
     transform: scale(1.03) translateY(-3px) !important;
     box-shadow: #10f49c 0 3px 10px 0;
@@ -298,6 +301,3 @@ a{
 .banner img{
 	width: 80px;
 }
-
-
-
