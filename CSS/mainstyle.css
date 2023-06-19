@@ -13,9 +13,8 @@
     url('/fonts/Inter.woff2') format('woff2'),
     url('/fonts/Inter.woff') format('woff'),
     url('/fonts/Inter.ttf') format('truetype'),
-    url('/fonts/Inter.svg#Inter') format('svg');
+    url('/fonts/Inter.svg') format('svg');
 }
-
 
 .container{
     height: 100vh;
@@ -30,12 +29,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: var(--accent) solid 2px;
     padding-left: 5%;
     padding-right: 5%;
 }
 
-.panel > h1
+.panel  h1
 {
     color: var(--accent);
     font-size: 3em;
@@ -51,17 +49,31 @@
 
 .slider{
     display: flex;
-    justify-self: center;
     min-width: 0;
-    flex-direction: row;
-    width: 90%;
+
+
     border-radius: 1rem;
     border: 22px solid var(--secondary-button);
-    overflow-x: scroll;
-    overflow-y: hidden;
-    margin: 50px auto auto;
     background-color: var(--secondary-button);
     gap: 25px;
+}
+
+@media screen and (orientation: landscape) {
+    .slider{
+        width: 90%;
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .slider{
+        height: 90%;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 }
 
 .no_scroll_bar{
@@ -106,6 +118,7 @@
     text-align: center;
 }
 
+/*PRESENTATION*/
 .logo{
     display: block;
 
@@ -171,6 +184,12 @@
 {
     max-width: 600px;
     margin: 0 auto;
+    text-align: justify;
+
+    border: solid var(--accent) 1px;
+    border-radius: 5px;
+    padding: 15px;
+    background: var(--secondary-button);
 }
 
 .contact{
@@ -194,10 +213,34 @@
     height: 100%;
 }
 
+.programmation
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+}
 
+.programmation > .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 1;
 
+    height: 100%;
+}
 
+.programmation > .projects{
+    grid-row: 2;
+    grid-column: 1;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+}
 
 
 
@@ -272,7 +315,7 @@ a{
     transition: transform 0.2s, box-shadow 0.1s;
 }
 
-.button i{
+.button > i{
     margin-right: 10px;
 }
 .button:hover{
