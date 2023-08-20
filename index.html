@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initia-scale=1.0">
     <title>Site perso Elgem</title>
     <link rel="stylesheet" href="/CSS/reset.css">
     <link rel="stylesheet" href="/CSS/mainstyle.css">
+    <link rel="stylesheet" href="/CSS/home.css">
     <script src="https://kit.fontawesome.com/0f0aafe960.js" crossorigin="anonymous"></script>
+    <script src="js/discord_to_clip.js" defer></script>
 </head>
 <body>
     <div class="container">
         <section class="panel presentation">
-            <div class="description">
-                <h1>Elgem </h1>
-                <div class="competences">
-                    <div class="competence">C#</div>
-                    <div class="competence">Java</div>
-                    <div class="competence">JavaScript</div>
-                </div>
 
+            <h1>Elgem </h1>
+            <div class="competences">
+                <div class="competence">C#</div>
+                <div class="competence">Java</div>
+                <div class="competence">JavaScript</div>
+            </div>
+            <div class="description">
                 <p>
                     (Site en construction !)
                     Je suis un simple étudiant en informatique passionné par ce qu'il fait.
@@ -26,13 +29,15 @@
                     Bonne visite !
                 </p>
             </div>
+
+
             <img src="/images/Logo.svg" alt="Logo de Elgem" class="logo">
             <div class="contact">
                 <hr>
                 <h2>Me contacter</h2>
                 <div class="contact_infos">
                     <a class="button mail"><i class="fa-solid fa-envelope"></i>Mail</a>
-                    <a class="button discord"><i class="fa-brands fa-discord"></i>Discord</a>
+                    <a class="button discord toclip" data-username="elgem" data-hover="Copier le pseudo" data-clicked="Copié !"><i class="fa-brands fa-discord"></i>Discord</a>
                     <a class="button github" href="https://github.com/Elgemp4" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                 </div>
             </div>
