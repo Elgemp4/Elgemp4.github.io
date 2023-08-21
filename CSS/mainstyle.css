@@ -5,54 +5,62 @@
     --secondary-button: #e8f2ec;
     --accent: #61a87b;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter.eot');
-    src: url('/fonts/Inter.eot') format('embedded-opentype'),
-    url('/fonts/Inter.woff2') format('woff2'),
-    url('/fonts/Inter.woff') format('woff'),
-    url('/fonts/Inter.ttf') format('truetype'),
-    url('/fonts/Inter.svg') format('svg');
+    font-family: "Inter";
+    src: url('../fonts/Inter.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
 }
 
 body{
-    background-color: var(--background);
-    color: var(--text);
-    font-family: "Inter", Arial, sans-serif;
-    min-width: 500px;
-    margin: auto;
+    font-family: "Inter";
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.hero{
+    background: linear-gradient(10deg, var(--accent), color-mix(in oklab, var(--accent), blue 35%));
+    padding: 1rem;
+    color: var(--background);
+    margin-bottom: 1rem;
+}
+
+.hero p{
+    text-align: center;
+    padding-top: 1em;
+    color: color-mix(in oklab, var(--background) 70%, gray);
 }
 
 h1{
-    font-weight: bold;
-    font-size: 4vh;
-    margin: 20px 0;
+    text-align: center;
+    font-size: clamp(1rem, 3rem, 5vw);
 }
 
 h2{
-    font-weight: bold;
-    font-size: 3vh;
-    text-align: center;
-    padding: 15px;
+    font-size: clamp(0.5rem, 2.5rem, 5vw);
+    line-height: clamp(0.5rem, 2.5rem, 5vw);
 }
 
-b{
-    font-weight: bold;
-    color: var(--accent);
+p, a, button, li{
+    font-size: clamp(0.5rem, 2rem, 2vw);
 }
 
-p{
-    line-height: 3vw;
-    font-size: 2.5vh;
-    margin: 10px 0;
-}
 
-a{
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 2.5vh;
-    color: var(--accent);
-    width: auto;
-}
 
+.competence{
+
+}
