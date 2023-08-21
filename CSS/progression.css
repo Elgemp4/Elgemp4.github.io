@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Inter";
+}
+
+.progress_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.progress, .add{
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    background-color: var(--secondary-button);
+    padding: 0.2em;
+}
+
+.progress h2{
+    text-align: center;
+}
+
+.progress .header{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-content: end;
+}
+
+.edit{
+    position: absolute;
+    border: 1px solid var(--secondary-button);
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    top: 5%;
+    right: 5%;
+}
