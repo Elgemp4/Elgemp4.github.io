@@ -26,8 +26,8 @@ body{
 
 .progress, .add{
     position: relative;
-    width: 40vw;
-    height: 40vw;
+    width: min(40vw, 20rem);
+    height: min(40vw, 20rem);
     background-color: var(--secondary-button);
     padding: 0.2em;
 }
@@ -39,16 +39,53 @@ body{
 .progress .header{
     height: 15%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-content: end;
+    align-content: start;
 }
 
 .edit{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
     position: absolute;
     border: 1px solid var(--secondary-button);
     z-index: 1;
     width: 10%;
     height: 10%;
-    top: 5%;
+    top: 2.5%;
     right: 5%;
+}
+
+.edit:hover{
+    transform: scale(101.5%);
+}
+
+.progress:hover .edit{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.circular_progress{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.circle{
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--accent);
+
+}
+
+
+.edit img {
+    width: 100%;
+    height: 100%;
 }
