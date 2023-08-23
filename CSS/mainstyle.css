@@ -55,8 +55,12 @@ h2{
     line-height: clamp(0.5rem, 2.5rem, 5vw);
 }
 
-p, a, button, li{
-    font-size: clamp(0.5rem, 2rem, 2vw);
+p{
+    padding-bottom: 2vw;
+}
+
+p, a, button, li, label, input, span{
+    font-size: clamp(0.5rem, 2rem, 3vw);
 }
 
 

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="./CSS/mainstyle.css">
+    <link rel="stylesheet" href="./CSS/mainstyle.css">
     <link rel="stylesheet" href="./CSS/progression.css">
+    <script src="./js/progress_circle.js" defer></script>
 </head>
 <body>
 
@@ -14,53 +15,46 @@
       <h1>Suivi de progression</h1>
       <p>Une simple application permettant de suivre vos progrès !</p>
     </div>
+
     <div class="progress_list">
-      <div class="progress">
+      <div class="progress" data-type="template" hidden>
         <div class="header">
-          <h2>Exemple</h2>
+          <h2 class="title"></h2>
           <button class="edit"><img src="../images/edit-regular.svg"></button>
+
         </div>
         <hr>
-        <div class="circular_progress">
+        <div class="content">
+          <div class="circular_progress">
             <div class="circle">
-                <div class="mask">
-                    <span class="progress">15%</span>
-                </div>
+              <div class="mask">
+                <span class="percentage"></span>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-      <div class="progress">
-        <div class="header">
-          <h2>Exemple</h2>
-          <button class="edit"><img src="../images/edit-regular.svg"></button>
-        </div>
-        <hr>
-        <svg></svg>
-      </div><div class="progress">
-      <div class="header">
-        <h2>Exemple</h2>
-        <button class="edit"><img src="../images/edit-regular.svg"></button>
-      </div>
-      <hr>
-      <svg></svg>
-    </div>
-      <div class="progress">
-        <div class="header">
-          <h2>Exemple</h2>
-          <button class="edit"><img src="../images/edit-regular.svg"></button>
-        </div>
-        <hr>
-        <svg></svg>
-      </div>
-
       <div class="add">
-        <button>+</button>
+        <button class="addBtn"><img src="./images/add.png"></button>
       </div>
     </div>
-    <hr>
-
   </div>
 
-  </div>
+  <dialog class="configuration">
+    <p>Entrez ici votre configuration !</p>
+    <form class="editForm" method="dialog">
+      <span>
+        <label for="name">Nom : </label>
+        <input id="name" type="text">
+      </span>
+      <span>
+        <label for="percentage">Completion : </label>
+        <input id="percentage" type="number" min="0" max="100">%
+      </span>
+      <button type="submit">Submit</button>
+
+    </form>
+  </dialog>
+
 </body>
 </html>

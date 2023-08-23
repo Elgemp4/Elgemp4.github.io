@@ -24,6 +24,7 @@ body{
     gap: 1rem;
 }
 
+
 .progress, .add{
     position: relative;
     width: min(40vw, 20rem);
@@ -37,11 +38,14 @@ body{
 }
 
 .progress .header{
-    height: 15%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: start;
+}
+
+hr{
+    margin-bottom: 5%;
 }
 
 .edit{
@@ -68,20 +72,39 @@ body{
 }
 
 .circular_progress{
-    position: relative;
     display: flex;
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
 }
 
 .circle{
-    width: 80%;
-    height: 80%;
-    justify-content: center;
+    display: flex;
     align-content: center;
-    background-color: var(--accent);
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 70%;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0.02rem gray;
+}
 
+.mask{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    background-color: var(--background);
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 1rem 0.02rem gray inset;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.percentage{
+    font-size: clamp(0.5rem, 2.5rem, 5vw);
+    min-width: 20%;
+    border: white 1px solid;
+    text-align: center;
 }
 
 
@@ -89,3 +112,58 @@ body{
     width: 100%;
     height: 100%;
 }
+
+.add button{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.add img {
+    height: 70%;
+    width: 70%;
+}
+
+.configuration {
+    padding: 1em;
+    max-width: 50em;
+    margin: auto;
+}
+
+.configuration::backdrop{
+    background: #444444;
+    opacity: 0.9;
+}
+
+
+.configuration form{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 1em;
+}
+
+.configuration label{
+    display: inline-block;
+    width: 7em;
+}
+
+.configuration input{
+    width: 6em;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.configuration button{
+    max-width: 5em;
+    margin: 1em auto 0 auto;
+    padding: 0.2em;
+}
+
