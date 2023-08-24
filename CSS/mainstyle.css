@@ -33,15 +33,16 @@ body{
 
 
 .hero{
-    background: linear-gradient(10deg, var(--accent), color-mix(in oklab, var(--accent), blue 35%));
-    padding: 1rem;
+    background: linear-gradient(10deg, var(--accent), #368db3);
+    padding: 0.5em;
     color: var(--background);
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .hero p{
     text-align: center;
-    padding-top: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     color: color-mix(in oklab, var(--background) 70%, gray);
 }
 

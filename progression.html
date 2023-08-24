@@ -45,11 +45,15 @@
     <form class="editForm" method="dialog">
       <span>
         <label for="name">Nom : </label>
-        <input id="name" type="text">
+        <input id="name" type="text" required>
       </span>
       <span>
         <label for="percentage">Completion : </label>
-        <input id="percentage" type="number" min="0" max="100">%
+        <input id="percentage" type="number" min="0" max="100" required>%
+      </span>
+      <span>
+        <label for="substasks">Sous-tâches : </label>
+        <input id="substasks" type="checkbox">
       </span>
       <button type="submit">Submit</button>
 

@@ -159,6 +159,15 @@ hr{
     width: 6em;
     padding: 0.2em;
     text-align: center;
+    vertical-align: middle;
+}
+
+.configuration input[type="checkbox"]{
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    text-align: center;
+
 }
 
 .configuration button{
